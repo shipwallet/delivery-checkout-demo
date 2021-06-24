@@ -156,6 +156,7 @@ export default function App() {
         maxWidth: "610px",
         margin: "auto",
         paddingBottom: "30px",
+        paddingTop: "15px",
       }}
     >
       <h1>Delivery Checkout Demo</h1>
