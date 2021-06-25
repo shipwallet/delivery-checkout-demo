@@ -5,8 +5,8 @@ If you have any suggestions on how we can improve here on in our developer.ingri
 
 ## Running on codesandbox.io
 
-1. Go to [link]
-2. You can play around with the widget, fork the sandbox, copy the snippets, whatever helps you get started with Ingrid faster 🏃
+1. Go [here](https://codesandbox.io/s/github/shipwallet/delivery-checkout-demo?file=/src/App.tsx)
+2. Play around with the widget, fork the sandbox, copy the snippets, whatever helps you get started with Ingrid faster 🏃
 
 ## Running locally
 
