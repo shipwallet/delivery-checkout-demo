@@ -1,7 +1,8 @@
 import axios from "axios";
 import { SIWSessionDTO } from "./types";
 
-const serviceURL = "http://localhost:8080";
+const serviceURL =
+  "https://checkout-demo-backend-stage-qftqcdxvbq-ew.a.run.app";
 // checkout-demo-backend-stage service simulates the shops backend
 // It holds a mocked cart and passes requests to SIW service.
 // Your actual setup should look similar - You shouldn't call SIW directly from FE in order not to expose the private keys.
