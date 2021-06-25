@@ -29,10 +29,10 @@ export default function App() {
   const [isLoading, setIsLoading] = React.useState(false);
 
   React.useEffect(() => {
-    restoreAbandonedSession();
+    initDeliveryCheckout();
   }, []);
 
-  const restoreAbandonedSession = async () => {
+  const initDeliveryCheckout = async () => {
     // The user might leave the checkout page and come back again after some time
     // In that case, want to restore the previous session instead of creating a new one
     const existingSessionID = window.localStorage.getItem(
@@ -186,7 +186,7 @@ export default function App() {
               onClick={handleUpdateSession}
               disabled={!!!session || session.status === "COMPLETE"}
             >
-              Update session with a new item
+              Update session
             </Button>
 
             <Button
@@ -285,5 +285,5 @@ const buttonStyle: CSSProperties = {
   textTransform: "uppercase",
   fontSize: "12px",
   fontWeight: 500,
-  letterSpacing: "0.4px",
+  letterSpacing: "0.2px",
 };
