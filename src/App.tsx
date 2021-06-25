@@ -283,7 +283,7 @@ const cardHeaderStyle: CSSProperties = {
 const buttonStyle: CSSProperties = {
   display: "inline-block",
   textTransform: "uppercase",
-  fontSize: "12px",
+  fontSize: "13px",
   fontWeight: 500,
   letterSpacing: "0.2px",
 };
