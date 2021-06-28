@@ -11,6 +11,7 @@ import {
 } from "./api";
 import { replaceScriptNode, setupGeneralJSListeners } from "./utils";
 import { SIWSessionDTO } from "./types";
+import "./styles.css";
 
 const localStorageSessionIDKey = "ingrid-session-id";
 
@@ -164,34 +165,34 @@ export default function App() {
         >
           <Space size="middle" align="start" direction="horizontal">
             <Button
-              style={buttonStyle}
               type="primary"
               onClick={handleCreateSession}
               size="middle"
               loading={isLoading}
               disabled={!!session}
+              className="custom-button"
             >
               Create session
             </Button>
 
             <Button
-              style={buttonStyle}
               size="middle"
               loading={isLoading}
               type="primary"
               onClick={handleUpdateSession}
               disabled={!!!session || session.status === "COMPLETE"}
+              className="custom-button"
             >
               Update session
             </Button>
 
             <Button
-              style={buttonStyle}
               size="middle"
               loading={isLoading}
               type="primary"
               onClick={handleClearSession}
               disabled={!!!session}
+              className="custom-button"
             >
               Clear session
             </Button>
@@ -213,8 +214,8 @@ export default function App() {
               onClick={handleCompleteSession}
               disabled={!!!session || session.status === "COMPLETE"}
               size="middle"
-              style={buttonStyle}
               loading={isLoading}
+              className="custom-button"
             >
               Complete session
             </Button>
@@ -275,11 +276,4 @@ const cardStyle = { maxWidth: 610, width: "100vw" };
 const cardHeaderStyle: CSSProperties = {
   textAlign: "left",
   fontWeight: 500,
-};
-const buttonStyle: CSSProperties = {
-  display: "inline-block",
-  textTransform: "uppercase",
-  fontSize: "13px",
-  fontWeight: 500,
-  letterSpacing: "0.2px",
 };

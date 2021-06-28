@@ -1,0 +1,20 @@
+/* Code sandbox crashes when less styles are imported from antd so we have to hack it instead of customizing the styles */
+.custom-button {
+  background: black;
+  border-color: black;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+.custom-button:focus {
+  background: rgba(0, 0, 0, 0.85);
+  border-color: rgba(0, 0, 0, 0.85);
+}
+
+.custom-button:hover {
+  background: rgba(0, 0, 0, 0.85);
+  border-color: rgba(0, 0, 0, 0.85);
+}
