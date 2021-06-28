@@ -30,7 +30,7 @@ export const getSession = (sessionID: string) =>
   );
 
 // Adds a new product the the cart and bumps the price, calls siw/session.update under the hood
-export const updateSession = ({ sessionID }: { sessionID: string }) =>
+export const updateSession = (sessionID: string) =>
   axios.post<{ session: SIWSessionDTO; html_snippet: string }>(
     `${serviceURL}/session.update`,
     {
@@ -39,7 +39,7 @@ export const updateSession = ({ sessionID }: { sessionID: string }) =>
   );
 
 // Completes a session, calls siw/session.complete under the hood
-export const completeSession = ({ sessionID }: { sessionID: string }) =>
+export const completeSession = (sessionID: string) =>
   axios.post<{ tos_id: string; session: SIWSessionDTO }>(
     `${serviceURL}/session.complete`,
     {

@@ -106,9 +106,7 @@ export default function App() {
       window._sw!((api) => api.suspend());
 
       // We update the session by simply adding another item to the cart and bumping the price
-      const updateSessionResponse = await updateSession({
-        sessionID: session!.id,
-      });
+      const updateSessionResponse = await updateSession(session!.id);
       setSession(updateSessionResponse.data.session);
 
       // Resuming the widget will make it interactive again
@@ -123,9 +121,7 @@ export default function App() {
   const handleCompleteSession = async () => {
     setIsLoading(true);
     try {
-      const sessionCompleteResponse = await completeSession({
-        sessionID: session!.id,
-      });
+      const sessionCompleteResponse = await completeSession(session!.id);
       // If session is completed, we need to clear the sessionID in localstorage
       // As we will need a new session on the next checkout visit
       window.localStorage.removeItem(localStorageSessionIDKey);
