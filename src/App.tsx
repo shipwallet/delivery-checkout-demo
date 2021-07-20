@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React, { CSSProperties } from "react";
-import { Button, Card, Col, Row, Space, Statistic } from "antd";
+import { Button, Card, Col, Row, Space, Statistic, Typography } from "antd";
 import ReactJson from "react-json-view";
 
 import {
@@ -157,6 +157,12 @@ export default function App() {
       }}
     >
       <h1>Delivery Checkout Demo</h1>
+      <Typography.Text>
+        As we're a Swedish company, the demo is also set up to work in Sweden.
+        <br />
+        Here's a postal code from Stockholm that you could use to play around:
+        <b> 112 34</b>
+      </Typography.Text>
       <Space direction="vertical" align="center" size="middle">
         <Card
           title="Session control"
