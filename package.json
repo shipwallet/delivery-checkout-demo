@@ -1,11 +1,11 @@
 {
   "name": "react-typescript",
   "version": "1.0.0",
-  "description": "React and TypeScript example starter project",
+  "description": "Delivery checkout demo",
   "keywords": [
     "typescript",
     "react",
-    "starter"
+    "ingrid"
   ],
   "main": "src/index.tsx",
   "dependencies": {

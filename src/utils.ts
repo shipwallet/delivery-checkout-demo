@@ -33,17 +33,16 @@ export const replaceScriptNode = (node: any) => {
 export const setupGeneralJSListeners = () => {
   if (window._sw) {
     window._sw((api) => {
-      api.on("address_changed", (address) =>
-        console.log("address changed: ", address)
-      );
-      api.on("loaded", () => console.log("widget loaded"));
       api.on("door_code_changed", (doorCode) =>
         console.log("door code changed: ", doorCode)
       );
       api.on("courier_instructions_changed", (courierInstructions) =>
         console.log("courier instructions changed: ", courierInstructions)
       );
-      api.on("no_shipping_options", () => console.log("no shipping options"));
+
+      api.on("data_changed", (data, meta) => {
+        console.log("data changed", { data, meta });
+      });
     });
   }
 };

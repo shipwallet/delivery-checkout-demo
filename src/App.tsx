@@ -71,8 +71,10 @@ export default function App() {
     // Whenever the user selects a different shipping option,
     // we want to update the shipping price in the 'total cost' section
     window._sw!((api) => {
-      api.on("shipping_option_changed", (option) => {
-        setShippingPrice(option.price);
+      api.on("data_changed", (data, meta) => {
+        if (meta.price_changed) {
+          setShippingPrice(data.price);
+        }
       });
     });
 
