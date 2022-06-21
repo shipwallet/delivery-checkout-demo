@@ -105,17 +105,10 @@ export default function App() {
   const handleUpdateSession = async () => {
     setIsLoading(true);
     try {
-      // We need to suspend the widget, so the user cannot change anything while we're updating the session
-      window._sw!((api) => api.suspend());
-
       // We update the session by simply adding another item to the cart and bumping the price
       const updateSessionResponse = await updateSession(session!.id);
+      // The Widget App will receive a push event from our BE when session is updated and refresh itself automatically to reflect the updated session
       setSession(updateSessionResponse.data.session);
-
-      // Resuming the widget will make it interactive again
-      // And cause it to sync with our backend, So that whatever changes you made
-      // via `session.update`are visible on the widget now
-      window._sw!((api) => api.resume());
     } finally {
       setIsLoading(false);
     }
